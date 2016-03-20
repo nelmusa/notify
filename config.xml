@@ -45,7 +45,7 @@
 	<gap:plugin name="com.phonegap.plugins.pushplugin"/>
 
 	<platform name="android"></platform>
-	<platform name="ios"></platform>
+	<!-- <platform name="ios"></platform> -->
 
 	<access origin="*"/>
 	<plugin name="cordova-plugin-whitelist" version="1"/>
