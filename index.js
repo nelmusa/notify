@@ -32,7 +32,7 @@ var app = {
         // if (device.platform == 'android' || device.platform == 'Android') {
             alert("Register called");
             //tu Project ID aca!!
-            pushNotification.register(this.successHandler, this.errorHandler,{"826441079868":"wai-global-001","ecb":"app.onNotificationGCM"});
+            pushNotification.register(this.successHandler, this.errorHandler,{"wai-global-001":"826441079868","ecb":"app.onNotificationGCM"});
         // }
         // else {
             // alert("Register called");
