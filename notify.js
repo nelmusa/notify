@@ -10,7 +10,7 @@ function bindEvents() {
 
 function onDeviceReady() {
     alert("device ready");
-    var pushNotification = window.plugins.pushNotification;
+    var pushNotification = window.plugins.PushNotification;
     alert(device.platform);
     if (device.platform == 'android') {
         alert("Register called " + device.platform);
