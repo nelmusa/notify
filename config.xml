@@ -43,12 +43,12 @@
 	<!-- <gap:plugin name="org.apache.cordova.splashscreen"/> -->
 	<!-- <gap:plugin name="org.apache.cordova.vibration"/> -->
 	<gap:plugin name="com.phonegap.plugins.pushplugin"/>
+	<gap:plugin name="cordova-plugin-whitelist"/>
 
 	<platform name="android"></platform>
 	<!-- <platform name="ios"></platform> -->
 
 	<access origin="*"/>
-	<plugin name="cordova-plugin-whitelist" version="1"/>
 	<allow-intent href="http://*/*"/>
 	<allow-intent href="https://*/*"/>
 	<allow-intent href="tel:*"/>
