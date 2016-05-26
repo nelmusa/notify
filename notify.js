@@ -18,7 +18,7 @@ bindEvents: function() {
 // function, we must explicity call 'app.receivedEvent(...);'
 onDeviceReady: function() {
 	alert("The device is ready to use");
-	app.receivedEvent('deviceready');
+	// app.receivedEvent('deviceready');
 	alert("Sending project id to GCM server to register with the gcm");
 	var pushNotification = window.plugins.pushNotification;
 	pushNotification.register(app.successHandler, app.errorHandler,{"senderID":"826441079868","ecb":"app.onNotificationGCM"});
