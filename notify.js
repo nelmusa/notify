@@ -51,30 +51,34 @@ var app = {
         switch( e.event )
         {
             case 'registered':
-                if ( e.regid.length > 0 )
-                {
-                    console.log("Regid " + e.regid);
-                    alert('registration id = '+e.regid);
+            if ( e.regid.length > 0 )
+            {
+                console.log("Regid " + e.regid);
+                alert('registration id = '+e.regid);
                     //Cuando se registre le pasamos el regid al input
                     document.getElementById('regId').value = e.regid;
                 }
-            break;
+                break;
 
-            case 'message':
+                case 'message':
               // NOTIFICACION!!!
               alert('message = '+e.message+' msgcnt = '+e.msgcnt);
-            break;
+              break;
 
-            case 'error':
+              case 'error':
               alert('GCM error = '+e.msg);
-            break;
+              break;
 
-            default:
+              default:
               alert('An unknown GCM event has occurred');
               break;
-        }
-    },
-    onNotificationAPN: function(event) {
+          }
+      },
+
+// <form id="formulario" name="formulario" method="post" action="http://www.wai-news.com/php/notify.php">
+
+      
+      onNotificationAPN: function(event) {
         var pushNotification = window.plugins.pushNotification;
         alert("Running in JS - onNotificationAPN - Received a notification! " + event.alert);
         
