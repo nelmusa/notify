@@ -1,18 +1,15 @@
 function initialize() {
-    alert("Inicia");
-    console.log("Inicia");
+    alert("inicia");
     bindEvents();
 }
 
 function bindEvents() {
+    alert("add event listener");
     document.addEventListener('deviceready', onDeviceReady, false);
 }
 
 function onDeviceReady() {
-    receivedEvent('deviceready');
-}
-
-function receivedEvent(id) {
+    alert("device ready");
     var pushNotification = window.plugins.pushNotification;
     if (device.platform == 'android' || device.platform == 'Android') {
         alert("Register called " + device.platform);
