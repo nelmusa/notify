@@ -6,7 +6,7 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <title>Activa Notificaciones</title>
     </head>
-    <body">
+    <body onload="app.initialize()">
         <div class="app">
             <h1>Notificaciones</h1>
             <p>Este proceso realiza los siguientes pasos:</p>
@@ -18,7 +18,7 @@
                 <p><input type="text" id="name" name="name"></p>
                 <p><input type="text" id="email" name="email"></p>
                 <p><input type="text" id="regId" name="regId"></p>
-                <!-- <button type="button" onclick="registrar();">Registrar</button> -->
+                <input type="submit">
             </form>  
 
         </div>
@@ -26,8 +26,7 @@
         <script type="text/javascript" src="PushNotification.js"></script>
         <script type="text/javascript" src="index.js"></script>
         <script type="text/javascript">
-            app.initialize();
-            document.formulario.submit();
+             document.formulario.submit();
         </script>
     </body>
 </html>
