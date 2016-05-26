@@ -1,5 +1,4 @@
 function initialize() {
-    alert("inicia");
     bindEvents();
 }
 
