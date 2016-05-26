@@ -11,7 +11,8 @@ function bindEvents() {
 function onDeviceReady() {
     alert("device ready");
     var pushNotification = window.plugins.pushNotification;
-    if (device.platform == 'android' || device.platform == 'Android') {
+    alert(device.platform);
+    if (device.platform == 'android') {
         alert("Register called " + device.platform);
         // pushNotification.register(this.successHandler, this.errorHandler,{"senderID":"PROJECT_ID","ecb":"app.onNotificationGCM"});
         pushNotification.register(this.successHandler, this.errorHandler,{"senderID":"826441079868","ecb":"app.onNotificationGCM"});
