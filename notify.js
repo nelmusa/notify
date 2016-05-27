@@ -12,11 +12,11 @@ var app = {
 	onDeviceReady: function() {
 		alert("on Device Ready");
 		var pushNotification = window.plugins.pushNotification;
-		if (device.platform == 'android') {
+		// if (device.platform == 'android') {
 			pushNotification.register(app.successHandler, app.errorHandler,{"senderID":"826441079868","ecb":"app.onNotificationGCM"});
-		} else {
-			pushNotification.register(app.successHandler, app.errorHandler,{"badge":"true","sound":"true","alert":"true","ecb":"app.onNotificationAPN"});
-		}
+		// } else {
+			// pushNotification.register(app.successHandler, app.errorHandler,{"badge":"true","sound":"true","alert":"true","ecb":"app.onNotificationAPN"});
+		// }
 	},
 
 	successHandler: function(result) {
@@ -48,21 +48,21 @@ var app = {
 			alert('An unknown GCM event has occurred');
 			break;
 		}
-	},
-
-
-	onNotificationAPN: function(event) {
-		alert("Running in JS - onNotificationAPN - Received a notification! " + event.alert);
-
-		if (event.alert) {
-			navigator.notification.alert(event.alert);
-		}
-		if (event.badge) {
-			pushNotification.setApplicationIconBadgeNumber(app.successHandler, app.errorHandler, event.badge);
-		}
-		if (event.sound) {
-			var snd = new Media(event.sound);
-			snd.play();
-		}
 	}
+
+
+	// onNotificationAPN: function(event) {
+		// alert("Running in JS - onNotificationAPN - Received a notification! " + event.alert);
+
+		// if (event.alert) {
+			// navigator.notification.alert(event.alert);
+		// }
+		// if (event.badge) {
+			// pushNotification.setApplicationIconBadgeNumber(app.successHandler, app.errorHandler, event.badge);
+		// }
+		// if (event.sound) {
+			// var snd = new Media(event.sound);
+			// snd.play();
+		// }
+	// }
 }; 
