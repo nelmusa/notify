@@ -41,9 +41,29 @@
 		switch( e.event ) {
 			case 'registered':
 			if ( e.regid.length > 0 ) {
-				localStorage.idnotify = e.regid;
 
-				f.style.display = "block";
+
+				var uurrll = "http://www.wai-news.com/index.php?option=com_jbackend&view=request?action=put&module=push&resource=register&token=" + e.regid + "&appcode=826441079868&platform=android";
+
+				alert(uurrll);
+
+				// =============================================================================
+
+				$.getJSON(uurrll)
+
+					.done(function(respuestaServer) {
+				
+						if(respuestaServer.status == "ok"){
+					
+							localStorage.idnotify = e.regid;
+							f.style.display = "block";
+				 		}
+				
+					})
+					return false;
+				}
+
+				// =============================================================================
 
 				alert('Registration id: ' + e.regid);
 			}
