@@ -1,19 +1,28 @@
-
+(1) Formato creación de terminal
 <end-point>?action=put&module=push&resource=register&token=<token>&appcode=<appcode>&platform=android
 
-http://www.wai-news.com/administrator/index.php?action=put&module=push&resource=register&token=APA91bF-O4Wl0lSZO0GXDBvzb27T6H3KSmkXqCcFzbnYwORc0t0wmjHjoy4wqaY9DgUO8XIxW5OwSGofvNm6ma79D0CkXTRZMbOf0NifMVJQ01gsB_3KHsx-leQMdEC5JWjdSeArNzyi&appcode=826441079868&platform=android
+(2) <end-point>
+http://www.wai-news.com/index.php?option=com_jbackend&view=request
 
+(3) <end-point> + formato
+http://www.wai-news.com/index.php?option=com_jbackend&view=request?action=put&module=push&resource=register&token=<token>&appcode=<appcode>&platform=android
 
+(4) Prueba OK
+http://www.wai-news.com/index.php?option=com_jbackend&view=request&action=put&module=push&resource=register&token=APA91bF-O4Wl0lSZO0GXDBvzb27T6H3KSmkXqCcFzbnYwORc0t0wmjHjoy4wqaY9DgUO8XIxW5OwSGofvNm6ma79D0CkXTRZMbOf0NifMVJQ01gsB_3KHsx-leQMdEC5JWjdSeArNzyi&appcode=826441079868&platform=android
 
+(5) Respuesta OK
+{"status":"ok","token":"APA91bF-O4Wl0lSZO0GXDBvzb27T6H3KSmkXqCcFzbnYwORc0t0wmjHjoy4wqaY9DgUO8XIxW5OwSGofvNm6ma79D0CkXTRZMbOf0NifMVJQ01gsB_3KHsx-leQMdEC5JWjdSeArNzyi","appcode":"826441079868","platform":"android","platform_code":1,"app_id":3,"device_id":1,"ios_alert":0,"ios_badge":0,"ios_sound":0}
 
+(6) Sheduler URL
+http://www.wai-news.com/index.php?option=com_jbackend&view=request&action=get&module=push&resource=scheduler
 
+(7) Respuesta OK
+{"status":"ok","batch_size":10,"sent":0,"success":0,"failure":0}
 
+============================================================================================================
 
+(4) Appp registration URL (ejemplo):
+http://www.support4joomla.com/jbackend/rest/put/push/register?token=0987654321&appcode=jbackapp&platform=android
 
-http://www.wai-news.com/jbackend
-
-http://www.support4joomla.com/jbackend/rest/put/push/register?token
-http://www.support4joomla.com/jbackend/administrator/index.php?
-
-
-
+(6) Sheduler URL (ejemplo)
+http://www.support4joomla.com/jbackend/rest/get/push/scheduler

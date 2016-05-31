@@ -1,16 +1,24 @@
 var app = {
+	var a = document.getElementById("1");
+	var b = document.getElementById("2");
+	var c = document.getElementById("3");
+	var d = document.getElementById("4");
+	var e = document.getElementById("5");
+	var f = document.getElementById("6");
+	var g = document.getElementById("7");
+
 	initialize: function() {
-		alert("inicio");
+		a.style.display = "block";
 		this.bindEvents();
 	},
 
 	bindEvents: function() {
-		alert("add event listener");
+		b.style.display = "block";
 		document.addEventListener('deviceready', this.onDeviceReady, false);
 	},
 
 	onDeviceReady: function() {
-		alert("on Device Ready");
+		c.style.display = "block";
 		var pushNotification = window.plugins.pushNotification;
 		// if (device.platform == 'android') {
 			pushNotification.register(app.successHandler, app.errorHandler,{"senderID":"826441079868","ecb":"app.onNotificationGCM"});
@@ -20,19 +28,25 @@ var app = {
 	},
 
 	successHandler: function(result) {
-		alert('Callback Success! Result = '+result);
+		if (result = "ok") {
+			d.style.display = "block";
+		}
+		// alert('Callback Success! Result = '+result);
 	},
 
 	errorHandler:function(error) {
-		alert(error);
+		e.style.display = "block";
 	},
 
 	onNotificationGCM: function(e) {
 		switch( e.event ) {
 			case 'registered':
 			if ( e.regid.length > 0 ) {
-				document.getElementById('regId').value = e.regid;
-				alert('registration id = '+e.regid);
+				// document.getElementById('regId').value = e.regid;
+				// alert('registration id = '+e.regid);
+				localStorage.idnotify = e.regid;
+				
+				f.style.display = "block";
 			}
 			break;
 
