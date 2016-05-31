@@ -44,14 +44,22 @@ function onNotificationGCM(e) {
 			var uurrll = "http://www.wai-news.com/index.php?option=com_jbackend&view=request?action=put&module=push&resource=register&token=" + e.regid + "&appcode=826441079868&platform=android";
 			alert(uurrll);
 			// =============================================================================
-			$.getJSON(uurrll)
-			.done(function(respuestaServer) {
-				if(respuestaServer.status == "ok"){
-					localStorage.idnotify = e.regid;
-					f.style.display = "block";
-				}
-			})
-			return false;
+			var ref = window.open(uurrll, '_blank', 'location=no');
+			ref.addEventListener("loaderror", onOffline, false);	
+			localStorage.idnotify = e.regid;
+			f.style.display = "block";
+
+
+
+
+
+
+			// $.getJSON(uurrll)
+			// .done(function(respuestaServer) {
+			// 	if(respuestaServer.status == "ok"){
+			// 	}
+			// })
+			// return false;
 		}
 
 		// =============================================================================
