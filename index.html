@@ -20,81 +20,23 @@
 		}
 	</style>
 
-	<script type="text/javascript" charset="utf-8">
-		document.addEventListener("deviceready", onDeviceReady, false);
-		function onDeviceReady() {
-			document.addEventListener("offline", onOffline, false);
-			document.addEventListener('backbutton', closeApp, false);
-
-			var pushNotification = window.plugins.pushNotification;
-			pushNotification.register(successHandler, errorHandler,{"senderID":"826441079868","ecb":"onNotificationGCM"});			
-		}
-	</script>
-
-
-
-
 </head>
 <body>
 	<div align="center">
 		<img src="img/WAI Logo.png" style="width: 40%; height: auto">
 	</div>
 	<div id="estado" align="center">
-		<p id="1">Inicia proceso</p>
-		<p id="2">Espera estar listo</p>
-		<p id="3">Esta listo</p>
-		<p id="4">Resultado OK</p>
-		<p id="5">Error</p>
-		<p id="6">Registrado</p>
-		<p id="7">g</p>
+		<p id="a">Start process</p>
+		<p id="b">Wait device ready</p>
+		<p id="c">Device ready</p>
+		<p id="d">OK response</p>
+		<p id="e">Error</p>
+		<p id="f">Registered</p>
 	</div>
 
 	<!-- <script type="text/javascript" charset="utf-8" src="notify.js"></script>  -->
 	<script type="text/javascript" charset="utf-8">
-		
-		var a = document.getElementById("1");
-		var b = document.getElementById("2");
-		var c = document.getElementById("3");
-		var d = document.getElementById("4");
-		var e = document.getElementById("5");
-		var f = document.getElementById("6");
-		var g = document.getElementById("7");
-
-		function successHandler(result) {
-			alert("success");
-			c.style.display = "block";
-			if (result = "ok") {
-				d.style.display = "block";
-			}
-		}
-
-		function errorHandler(error) {
-			e.style.display = "block";
-		}
-
-		function onNotificationGCM(e) {
-			switch( e.event ) {
-				case 'registered':
-				if ( e.regid.length > 0 ) {
-					localStorage.idnotify = e.regid;
-
-					f.style.display = "block";
-				}
-				break;
-
-				case 'message':
-				alert('message = '+e.message+' msgcnt = '+e.msgcnt);
-				break;
-
-				case 'error':
-				alert('GCM error = '+e.msg);
-				break;
-
-				default:
-				alert('An unknown GCM event has occurred');
-				break;
-			}
-		}
+		initialize();
 	</script>
 </body>
 </html>
