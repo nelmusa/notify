@@ -10,11 +10,27 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scale=no, maximum-scale=1" />
 
+	<script type="text/javascript" charset="utf-8" src="js/funciones.js"></script> 
+
 	<style type="text/css">
 		div p {
 			display: none;
 		}
 	</style>
+
+	<script type="text/javascript" charset="utf-8">
+		document.addEventListener("deviceready", onDeviceReady, false);
+		function onDeviceReady() {
+			document.addEventListener("offline", onOffline, false);
+			document.addEventListener('backbutton', closeApp, false);
+
+			var pushNotification = window.plugins.pushNotification;
+			pushNotification.register(successHandler, errorHandler,{"senderID":"826441079868","ecb":"onNotificationGCM"});			
+		}
+	</script>
+
+
+
 
 </head>
 <body>
@@ -31,7 +47,7 @@
 		<p id="7">g</p>
 	</div>
 
-	<script type="text/javascript" charset="utf-8" src="notify.js"></script> 
+	<!-- <script type="text/javascript" charset="utf-8" src="notify.js"></script>  -->
 	<script type="text/javascript" charset="utf-8">
 		
 		var a = document.getElementById("1");
@@ -42,9 +58,41 @@
 		var f = document.getElementById("6");
 		var g = document.getElementById("7");
 
-		// document.addEventListener("deviceready", onDeviceReady, false);
+		function successHandler(result) {
+			alert("success");
+			c.style.display = "block";
+			if (result = "ok") {
+				d.style.display = "block";
+			}
+		}
 
-		initialize();
+		function errorHandler(error) {
+			e.style.display = "block";
+		}
+
+		function onNotificationGCM(e) {
+			switch( e.event ) {
+				case 'registered':
+				if ( e.regid.length > 0 ) {
+					localStorage.idnotify = e.regid;
+
+					f.style.display = "block";
+				}
+				break;
+
+				case 'message':
+				alert('message = '+e.message+' msgcnt = '+e.msgcnt);
+				break;
+
+				case 'error':
+				alert('GCM error = '+e.msg);
+				break;
+
+				default:
+				alert('An unknown GCM event has occurred');
+				break;
+			}
+		}
 	</script>
 </body>
 </html>
