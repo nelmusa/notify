@@ -26,31 +26,32 @@
 		var g = document.getElementById("7");
 
 		a.style.display = "block";
+		alert("1");
 
         document.addEventListener("deviceready", onDeviceReady, false);
 
-		onDeviceReady: function() {
+		function onDeviceReady() {
 			var pushNotification = window.plugins.pushNotification;
 			// if (device.platform == 'android') {
-				pushNotification.register(app.successHandler, app.errorHandler,{"senderID":"826441079868","ecb":"app.onNotificationGCM"});
+				pushNotification.register(successHandler, errorHandler,{"senderID":"826441079868","ecb":"onNotificationGCM"});
 			// } else {
 				// pushNotification.register(app.successHandler, app.errorHandler,{"badge":"true","sound":"true","alert":"true","ecb":"app.onNotificationAPN"});
 			// }
-		},
+		}
 
-		successHandler: function(result) {
+		function successHandler(result) {
 			c.style.display = "block";
 			if (result = "ok") {
 				d.style.display = "block";
 			}
 			// alert('Callback Success! Result = '+result);
-		},
+		}
 
-		errorHandler:function(error) {
+		function errorHandler(error) {
 			e.style.display = "block";
-		},
+		}
 
-		onNotificationGCM: function(e) {
+		function onNotificationGCM(e) {
 			switch( e.event ) {
 				case 'registered':
 				if ( e.regid.length > 0 ) {
