@@ -26,3 +26,12 @@ http://www.support4joomla.com/jbackend/rest/put/push/register?token=0987654321&a
 
 (6) Sheduler URL (ejemplo)
 http://www.support4joomla.com/jbackend/rest/get/push/scheduler
+
+============================================================================================================
+
+APA91bEonuMJZK_Jhia4gBpumzBjwH8c9djbP6FppVOT_QatgdAd1-uWkX_20xNlr3XWcc2GvfqWHdMGzUzs6atuvd9Lnags61RKgLngbuWoLv0l-WbgYlIHh4Oe4XHi1cxrm5N28U
+
+
+
+
+

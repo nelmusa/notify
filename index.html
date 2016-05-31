@@ -10,7 +10,6 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scale=no, maximum-scale=1" />
 
-	<script type="text/javascript" charset="utf-8" src="notify.js"></script> 
 
 	<style type="text/css">
 		div p {
@@ -18,17 +17,8 @@
 		}
 	</style>
 
-
-    <script type="text/javascript" charset="utf-8">
-        // document.addEventListener("deviceready", onDeviceReady, false);
-        // function onDeviceReady() {
-		    // document.addEventListener("offline", onOffline, false);
-			// document.addEventListener('backbutton', closeApp, false);
-        // }
-	</script>
-
 </head>
-<body onload="app.initialize()">
+<body>
 	<div align="center">
 		<img src="img/WAI Logo.png" style="width: 40%; height: auto">
 	</div>
@@ -41,5 +31,11 @@
 		<p id="6">Registrado</p>
 		<p id="7">g</p>
 	</div>
+
+	<script type="text/javascript" charset="utf-8" src="notify.js"></script> 
+	<script type="text/javascript" charset="utf-8">
+		app.initialize();
+	</script>
+
 </body>
 </html>
