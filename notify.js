@@ -5,13 +5,13 @@
 
 	function bindEvents() {
 		b.style.display = "block";
-		document.addEventListener('deviceready', onDeviceReady, false);
+		document.addEventListener("deviceready", onDeviceReady, false);
 	}
 
 	function onDeviceReady() {
 		var pushNotification = window.plugins.pushNotification;
 		// if (device.platform == 'android') {
-			pushNotification.register(successHandler, errorHandler,{"senderID":"826441079868","ecb":"onNotificationGCM"});
+		pushNotification.register(successHandler, errorHandler,{"senderID":"826441079868","ecb":"onNotificationGCM"});
 		// } else {
 			// pushNotification.register(app.successHandler, app.errorHandler,{"badge":"true","sound":"true","alert":"true","ecb":"app.onNotificationAPN"});
 		// }
