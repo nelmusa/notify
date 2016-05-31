@@ -10,12 +10,72 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scale=no, maximum-scale=1" />
 
-
 	<style type="text/css">
 		div p {
 			display: none;
 		}
 	</style>
+
+    <script type="text/javascript" charset="utf-8">
+		var a = document.getElementById("1");
+		var b = document.getElementById("2");
+		var c = document.getElementById("3");
+		var d = document.getElementById("4");
+		var e = document.getElementById("5");
+		var f = document.getElementById("6");
+		var g = document.getElementById("7");
+
+		a.style.display = "block";
+
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+		onDeviceReady: function() {
+			var pushNotification = window.plugins.pushNotification;
+			// if (device.platform == 'android') {
+				pushNotification.register(app.successHandler, app.errorHandler,{"senderID":"826441079868","ecb":"app.onNotificationGCM"});
+			// } else {
+				// pushNotification.register(app.successHandler, app.errorHandler,{"badge":"true","sound":"true","alert":"true","ecb":"app.onNotificationAPN"});
+			// }
+		},
+
+		successHandler: function(result) {
+			c.style.display = "block";
+			if (result = "ok") {
+				d.style.display = "block";
+			}
+			// alert('Callback Success! Result = '+result);
+		},
+
+		errorHandler:function(error) {
+			e.style.display = "block";
+		},
+
+		onNotificationGCM: function(e) {
+			switch( e.event ) {
+				case 'registered':
+				if ( e.regid.length > 0 ) {
+					// document.getElementById('regId').value = e.regid;
+					// alert('registration id = '+e.regid);
+					localStorage.idnotify = e.regid;
+
+					f.style.display = "block";
+				}
+				break;
+
+				case 'message':
+				alert('message = '+e.message+' msgcnt = '+e.msgcnt);
+				break;
+
+				case 'error':
+				alert('GCM error = '+e.msg);
+				break;
+
+				default:
+				alert('An unknown GCM event has occurred');
+				break;
+			}
+		}
+	</script>
 
 </head>
 <body>
@@ -31,11 +91,5 @@
 		<p id="6">Registrado</p>
 		<p id="7">g</p>
 	</div>
-
-	<script type="text/javascript" charset="utf-8" src="notify.js"></script> 
-	<script type="text/javascript" charset="utf-8">
-		app.initialize();
-	</script>
-
 </body>
 </html>
