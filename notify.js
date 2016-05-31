@@ -18,7 +18,6 @@ var app = {
 	},
 
 	onDeviceReady: function() {
-		c.style.display = "block";
 		var pushNotification = window.plugins.pushNotification;
 		// if (device.platform == 'android') {
 			pushNotification.register(app.successHandler, app.errorHandler,{"senderID":"826441079868","ecb":"app.onNotificationGCM"});
@@ -28,6 +27,7 @@ var app = {
 	},
 
 	successHandler: function(result) {
+		c.style.display = "block";
 		if (result = "ok") {
 			d.style.display = "block";
 		}
