@@ -1,35 +1,42 @@
-	function initialize() {
+alert("1");
+
+var app = {
+	
+	alert("2");
+
+
+	initialize: function() {
 		a.style.display = "block";
 		this.bindEvents();
-	}
+	},
 
-	function bindEvents() {
+	bindEvents: function() {
 		b.style.display = "block";
 		document.addEventListener('deviceready', this.onDeviceReady, false);
-	}
+	},
 
-	function onDeviceReady() {
+	onDeviceReady: function() {
 		var pushNotification = window.plugins.pushNotification;
 		// if (device.platform == 'android') {
-			pushNotification.register(successHandler, errorHandler,{"senderID":"826441079868","ecb":"onNotificationGCM"});
+			pushNotification.register(app.successHandler, app.errorHandler,{"senderID":"826441079868","ecb":"app.onNotificationGCM"});
 		// } else {
 			// pushNotification.register(app.successHandler, app.errorHandler,{"badge":"true","sound":"true","alert":"true","ecb":"app.onNotificationAPN"});
 		// }
-	}
+	},
 
-	function successHandler(result) {
+	successHandler: function(result) {
 		c.style.display = "block";
 		if (result = "ok") {
 			d.style.display = "block";
 		}
 		// alert('Callback Success! Result = '+result);
-	}
+	},
 
-	function errorHandler(error) {
+	errorHandler:function(error) {
 		e.style.display = "block";
-	}
+	},
 
-	function onNotificationGCM(e) {
+	onNotificationGCM: function(e) {
 		switch( e.event ) {
 			case 'registered':
 			if ( e.regid.length > 0 ) {
@@ -70,3 +77,4 @@
 			// snd.play();
 		// }
 	// }
+}; 
