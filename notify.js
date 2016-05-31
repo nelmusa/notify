@@ -5,7 +5,7 @@
 
 	function bindEvents() {
 		b.style.display = "block";
-		document.addEventListener('deviceready', this.onDeviceReady, false);
+		document.addEventListener('deviceready', onDeviceReady, false);
 	}
 
 	function onDeviceReady() {
