@@ -1,10 +1,9 @@
 	var a = document.getElementById("a");
-		var b = document.getElementById("b");
-		var c = document.getElementById("c");
-		var d = document.getElementById("d");
-		var e = document.getElementById("e");
-		var f = document.getElementById("f");
-
+	var b = document.getElementById("b");
+	var c = document.getElementById("c");
+	var d = document.getElementById("d");
+	var e = document.getElementById("e");
+	var f = document.getElementById("f");
 
 	function initialize() {
 		a.style.display = "block";
