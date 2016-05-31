@@ -15,9 +15,11 @@
 		// } else {
 			// pushNotification.register(app.successHandler, app.errorHandler,{"badge":"true","sound":"true","alert":"true","ecb":"app.onNotificationAPN"});
 		// }
+		alert("on device ready");
 	}
 
 	function successHandler(result) {
+		alert("success");
 		c.style.display = "block";
 		if (result = "ok") {
 			d.style.display = "block";
