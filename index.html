@@ -16,7 +16,27 @@
 		}
 	</style>
 
-    <script type="text/javascript" charset="utf-8">
+	<script type="text/javascript" charset="utf-8">
+		document.addEventListener("deviceready", onDeviceReady, false);
+	</script>
+	
+</head>
+<body>
+	<div align="center">
+		<img src="img/WAI Logo.png" style="width: 40%; height: auto">
+	</div>
+	<div id="estado" align="center">
+		<p id="1">Inicia proceso</p>
+		<p id="2">Espera estar listo</p>
+		<p id="3">Esta listo</p>
+		<p id="4">Resultado OK</p>
+		<p id="5">Error</p>
+		<p id="6">Registrado</p>
+		<p id="7">g</p>
+	</div>
+	
+	<script type="text/javascript" charset="utf-8">
+		
 		var a = document.getElementById("1");
 		var b = document.getElementById("2");
 		var c = document.getElementById("3");
@@ -26,9 +46,6 @@
 		var g = document.getElementById("7");
 
 		a.style.display = "block";
-		alert("1");
-
-        document.addEventListener("deviceready", onDeviceReady, false);
 
 		function onDeviceReady() {
 			var pushNotification = window.plugins.pushNotification;
@@ -77,20 +94,5 @@
 			}
 		}
 	</script>
-
-</head>
-<body>
-	<div align="center">
-		<img src="img/WAI Logo.png" style="width: 40%; height: auto">
-	</div>
-	<div id="estado" align="center">
-		<p id="1">Inicia proceso</p>
-		<p id="2">Espera estar listo</p>
-		<p id="3">Esta listo</p>
-		<p id="4">Resultado OK</p>
-		<p id="5">Error</p>
-		<p id="6">Registrado</p>
-		<p id="7">g</p>
-	</div>
 </body>
 </html>
