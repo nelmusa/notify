@@ -49,7 +49,7 @@ function onNotificationGCM(e) {
 	switch( e.event ) {
 		case 'registered':
 		if ( e.regid.length > 0 ) {
-			var uurrll = "http://www.wai-news.com/index.php?option=com_jbackend&view=request?action=put&module=push&resource=register&token=" + e.regid + "&appcode=wai-notify-001&platform=android";
+			var uurrll = "http://www.wai-news.com/index.php?option=com_jbackend&view=request&action=put&module=push&resource=register&token=" + e.regid + "&appcode=wai-notify-001&platform=android";
 			alert(uurrll);
 
 			var ref = window.open(uurrll, '_blank', 'location=no');
