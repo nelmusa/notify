@@ -7,7 +7,7 @@ var f = document.getElementById("f");
 
 function prueba() {
 	c.style.display = "block";
-	var uurrll = "http://www.wai-news.com/index.php?option=com_jbackend&view=request&action=put&module=push&resource=register&token=APA91bF-O4Wl0lSZO0GXDBvzb27T6H3KSmkXqCcFzbnYwORc0t0wmjHjoy4wqaY9DgUO8XIxW5OwSGofvNm6ma79D0CkXTRZMbOf0NifMVJQ01gsB_3KHsx-leQMdEC5JWjdSeArNzyi&appcode=ya_no_mas&platform=android";
+	var uurrll = "http://www.wai-news.com/index.php?option=com_jbackend&view=request&action=put&module=push&resource=register&token=APA91bF-O4Wl0lSZO0GXDBvzb27T6H3KSmkXqCcFzbnYwORc0t0wmjHjoy4wqaY9DgUO8XIxW5OwSGofvNm6ma79D0CkXTRZMbOf0NifMVJQ01gsB_3KHsx-leQMdEC5JWjdSeArNzyi&appcode=wai-notify-001-no&platform=android";
 	var myWindow = window.open(uurrll, '_blank', 'location=no');
     setTimeout(function(){ myWindow.close() }, 1000);
 }
