@@ -8,10 +8,10 @@ http://www.wai-news.com/index.php?option=com_jbackend&view=request
 http://www.wai-news.com/index.php?option=com_jbackend&view=request?action=put&module=push&resource=register&token=<token>&appcode=<appcode>&platform=android
 
 (4) Prueba OK
-http://www.wai-news.com/index.php?option=com_jbackend&view=request&action=put&module=push&resource=register&token=APA91bF-O4Wl0lSZO0GXDBvzb27T6H3KSmkXqCcFzbnYwORc0t0wmjHjoy4wqaY9DgUO8XIxW5OwSGofvNm6ma79D0CkXTRZMbOf0NifMVJQ01gsB_3KHsx-leQMdEC5JWjdSeArNzyi&appcode=826441079868&platform=android
+http://www.wai-news.com/index.php?option=com_jbackend&view=request&action=put&module=push&resource=register&token=APA91bF-O4Wl0lSZO0GXDBvzb27T6H3KSmkXqCcFzbnYwORc0t0wmjHjoy4wqaY9DgUO8XIxW5OwSGofvNm6ma79D0CkXTRZMbOf0NifMVJQ01gsB_3KHsx-leQMdEC5JWjdSeArNzyi&appcode=wai-notify-001&platform=android
 
 (5) Respuesta OK
-{"status":"ok","token":"APA91bF-O4Wl0lSZO0GXDBvzb27T6H3KSmkXqCcFzbnYwORc0t0wmjHjoy4wqaY9DgUO8XIxW5OwSGofvNm6ma79D0CkXTRZMbOf0NifMVJQ01gsB_3KHsx-leQMdEC5JWjdSeArNzyi","appcode":"826441079868","platform":"android","platform_code":1,"app_id":3,"device_id":1,"ios_alert":0,"ios_badge":0,"ios_sound":0}
+{"status":"ok","token":"APA91bF-O4Wl0lSZO0GXDBvzb27T6H3KSmkXqCcFzbnYwORc0t0wmjHjoy4wqaY9DgUO8XIxW5OwSGofvNm6ma79D0CkXTRZMbOf0NifMVJQ01gsB_3KHsx-leQMdEC5JWjdSeArNzyi","appcode":"wai-notify-001","platform":"android","platform_code":1,"app_id":3,"device_id":1,"ios_alert":0,"ios_badge":0,"ios_sound":0}
 
 (6) Sheduler URL
 http://www.wai-news.com/index.php?option=com_jbackend&view=request&action=get&module=push&resource=scheduler

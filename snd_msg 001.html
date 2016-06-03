@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Inicio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+	<link href="css/intro.css" rel="stylesheet" type="text/css">
+	<link href="css/inicio.css" rel="stylesheet" type="text/css">
+
+	<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+
+	<script type="text/javascript" src="js/funciones.js"></script>
+
+    <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+
+</head>
+<body>
+	<div align="center">
+		<img src="img/WAI Logo.png" style="width: 10%; height: auto">
+	</div>
+	<h1>Enviar Mensajes</h1>
+
+	<input type="button" id="lista" value="Ejecutar envío de mensajes"/>
+	<div id="contenedor">
+		<ul id="contenedorlista"></ul>
+	</div>
+
+	<script>
+		$(document).ready(function() {
+			$("#lista").click(function() {
+				alert("1");
+				// var uurrll = "http://www.wai-news.com/index.php?option=com_jbackend&view=request&action=get&module=push&resource=scheduler";
+				var uurrll = "http://www.wai-news.com/index.php?option=com_jbackend&view=request&action=get&module=push&resource=scheduler?jsoncallback=?";
+
+				$.getJSON(uurrll, {format: "json"}, function(data) {
+					alert("2");
+					$("h1").html(data[0].status); 
+					$("p").html(data[0].sent); 
+				});
+
+				// .done(function(data) {
+					// $.each(data, function(key, value) {
+						// $("contenedorlista").append("<li>Envío se ejecuto: " + value.status + " (Enviados: " + value.sent + ", entregados: " + value.success + ", no entregados: " + value.failure + ") </li>");
+					// });
+				// });
+				
+			});
+		});
+	</script>
+</body>
+</html>
