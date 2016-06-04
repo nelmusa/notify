@@ -58,12 +58,12 @@
 		<icon src="res/icon/android/xxxhdpi.png" qualifier="xxxhdpi" />
 		<!-- ========================================================================= -->
 		<!-- splash screens -->
-		<splash src="res/screen/android/1-por-ldpi.png" density="ldpi" /> 
-		<splash src="res/screen/android/2-por-mdpi.png" density="mdpi" />
-		<splash src="res/screen/android/3-por-hdpi.png" density="hdpi" />
-		<splash src="res/screen/android/4-por-xhdpi.png" density="xhdpi" />
-		<splash src="res/screen/android/5-por-xxhdpi.png" density="xxhdpi" />
-		<splash src="res/screen/android/6-por-xxxhdpi.png" density="xxxhdpi" />
+		<!-- <splash src="res/screen/android/1-por-ldpi.png" density="ldpi" />  -->
+		<!-- <splash src="res/screen/android/2-por-mdpi.png" density="mdpi" /> -->
+		<!-- <splash src="res/screen/android/3-por-hdpi.png" density="hdpi" /> -->
+		<!-- <splash src="res/screen/android/4-por-xhdpi.png" density="xhdpi" /> -->
+		<!-- <splash src="res/screen/android/5-por-xxhdpi.png" density="xxhdpi" /> -->
+		<!-- <splash src="res/screen/android/6-por-xxxhdpi.png" density="xxxhdpi" /> -->
 	</platform>
 
 	<feature name="InAppBrowser">
