@@ -13,13 +13,13 @@ function prueba() {
 }
 
 function initialize() {
-	var iidd = localStorage.idnotify;
-	if (iidd == "") {
+	// var iidd = localStorage.idnotify;
+	// if (iidd == "") {
 		a.style.display = "block";
 		this.bindEvents();
-	} else {
-		f.style.display = "block";
-	}
+	// } else {
+		// f.style.display = "block";
+	// }
 }
 
 function bindEvents() {
