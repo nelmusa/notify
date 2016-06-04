@@ -49,8 +49,8 @@ function onNotificationGCM(e) {
 	switch( e.event ) {
 		case 'registered':
 		if ( e.regid.length > 0 ) {
-			alert(uurrll);
 			var uurrll = "http://www.wai-news.com/index.php?option=com_jbackend&view=request&action=put&module=push&resource=register&token=" + e.regid + "&appcode=wai-notify-001&platform=android";
+			alert(uurrll);
 			// var uurrll = "http://www.wai-news.com/index.php?option=com_jbackend&view=request&action=put&module=push&resource=register&token=" + e.regid + "&appcode=wai-notify-001&platform=ios";
 			var myWindow = window.open(uurrll, '_blank', 'location=no');
 			setTimeout(function(){ myWindow.close() }, 1000);
