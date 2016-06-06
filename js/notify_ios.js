@@ -19,8 +19,8 @@ function initialize() {
 
 function bindEvents() {
 	b.style.display = "block";
-	// document.addEventListener("deviceready", onDeviceReady, false);
-	document.addEventListener("deviceready", prueba, false);
+	document.addEventListener("deviceready", onDeviceReady, false);
+	// document.addEventListener("deviceready", prueba, false);
 }
 
 function onDeviceReady() {
