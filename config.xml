@@ -45,18 +45,18 @@
 	<gap:plugin name="com.phonegap.plugins.pushplugin"/>
 	<!-- <gap:plugin name="cordova-plugin-whitelist"/> -->
 
-	<!-- <platform name="ios"></platform> -->
+	<platform name="ios"></platform>
 
-	<platform name="android">
-		<allow-intent href="market:*"/>
+	<!-- <platform name="android"> -->
+		<!-- <allow-intent href="market:*"/> -->
 		<!-- icon -->
-		<icon src="res/icon/android/ldpi.png" qualifier="ldpi" />
-		<icon src="res/icon/android/mdpi.png" qualifier="mdpi" />
-		<icon src="res/icon/android/hdpi.png" qualifier="hdpi" />
-		<icon src="res/icon/android/xhdpi.png" qualifier="xhdpi" />
-		<icon src="res/icon/android/xxhdpi.png" qualifier="xxhdpi" />
-		<icon src="res/icon/android/xxxhdpi.png" qualifier="xxxhdpi" />
-		<!-- ========================================================================= -->
+		<!-- <icon src="res/icon/android/ldpi.png" qualifier="ldpi" /> -->
+		<!-- <icon src="res/icon/android/mdpi.png" qualifier="mdpi" /> -->
+		<!-- <icon src="res/icon/android/hdpi.png" qualifier="hdpi" /> -->
+		<!-- <icon src="res/icon/android/xhdpi.png" qualifier="xhdpi" /> -->
+		<!-- <icon src="res/icon/android/xxhdpi.png" qualifier="xxhdpi" /> -->
+		<!-- <icon src="res/icon/android/xxxhdpi.png" qualifier="xxxhdpi" /> -->
+		=========================================================================
 		<!-- splash screens -->
 		<!-- <splash src="res/screen/android/1-por-ldpi.png" density="ldpi" />  -->
 		<!-- <splash src="res/screen/android/2-por-mdpi.png" density="mdpi" /> -->
@@ -64,7 +64,7 @@
 		<!-- <splash src="res/screen/android/4-por-xhdpi.png" density="xhdpi" /> -->
 		<!-- <splash src="res/screen/android/5-por-xxhdpi.png" density="xxhdpi" /> -->
 		<!-- <splash src="res/screen/android/6-por-xxxhdpi.png" density="xxxhdpi" /> -->
-	</platform>
+	<!-- </platform> -->
 
 	<feature name="InAppBrowser">
 	    <param name="ios-package" value="CDVInAppBrowser" />
