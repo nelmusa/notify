@@ -27,9 +27,9 @@ function onDeviceReady() {
 	c.style.display = "block";
 	var pushNotification = window.plugins.pushNotification;
 // if (device.platform == 'android') {
-	pushNotification.register(successHandler, errorHandler,{"senderID":"508191947380","ecb":"onNotificationGCM"});
+	// pushNotification.register(successHandler, errorHandler,{"senderID":"508191947380","ecb":"onNotificationGCM"});
 // } else {
-	// pushNotification.register(successHandler, errorHandler,{"badge":"true","sound":"true","alert":"true","ecb":"onNotificationAPN"});
+	pushNotification.register(successHandler, errorHandler,{"badge":"true","sound":"true","alert":"true","ecb":"onNotificationAPN"});
 // }
 }
 
@@ -74,17 +74,18 @@ function onNotificationGCM(e) {
 }
 
 
-// function onNotificationAPN(event) {
-	// alert("Running in JS - onNotificationAPN - Received a notification! " + event.alert);
+function onNotificationAPN(event) {
+	alert("Running in JS - onNotificationAPN - Received a notification! " + event.alert);
 
-	// if (event.alert) {
-		// navigator.notification.alert(event.alert);
-	// }
-	// if (event.badge) {
-		// pushNotification.setApplicationIconBadgeNumber(successHandler, errorHandler, event.badge);
-	// }
-	// if (event.sound) {
-		// var snd = new Media(event.sound);
-		// snd.play();
-	// }
-// }
+	if (event.alert) {
+		navigator.notification.alert(event.alert);
+	}
+	if (event.badge) {
+		pushNotification.setApplicationIconBadgeNumber(successHandler, errorHandler, event.badge);
+	}
+	if (event.sound) {
+		var snd = new Media(event.sound);
+		snd.play();
+	}
+	
+}
