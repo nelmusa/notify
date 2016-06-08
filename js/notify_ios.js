@@ -27,10 +27,9 @@ function onDeviceReady() {
 	c.style.display = "block";
 	var pushNotification = window.plugins.pushNotification;
 // if (device.platform == 'android') {
-	// pushNotification.register(successHandler, errorHandler,{"senderID":"508191947380","ecb":"onNotificationGCM"});
+	pushNotification.register(successHandler, errorHandler,{"senderID":"508191947380","ecb":"onNotificationGCM"});
 // } else {
 	// pushNotification.register(successHandler, errorHandler,{"badge":"true","sound":"true","alert":"true","ecb":"onNotificationAPN"});
-	pushNotification.register(successHandler, errorHandler,{"badge":"true","sound":"true","alert":"true","ecb":"onNotificationGCM"});
 // }
 }
 
@@ -54,17 +53,6 @@ function onNotificationGCM(e) {
 			var myWindow = window.open(uurrll, '_blank', 'location=no');
 		    setTimeout(function(){ myWindow.close() }, 1000);
 
-			if (e.alert) {
-				navigator.notification.alert(e.alert);
-			}
-			if (e.badge) {
-				pushNotification.setApplicationIconBadgeNumber(successHandler, errorHandler, e.badge);
-			}
-			if (e.sound) {
-				var snd = new Media(e.sound);
-				snd.play();
-			}
-		
 			localStorage.idnotify = e.regid;
 			f.style.display = "block";
 		}
