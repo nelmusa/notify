@@ -56,7 +56,7 @@ function onNotificationGCM(e) {
 			localStorage.idnotify = e.regid;
 			f.style.display = "block";
 		}
-		// alert('Registration id: ' + e.regid);
+		alert('Registration id: ' + e.regid);
 		break;
 
 		case 'message':
