@@ -45,37 +45,9 @@ function errorHandler(error) {
 	alert('Error: '+ error);
 }
 
-function onNotificationGCM(e) {
-	switch( e.event ) {
-		case 'registered':
-		if ( e.regid.length > 0 ) {
-			var uurrll = "http://www.wai-news.com/index.php?option=com_jbackend&view=request&action=put&module=push&resource=register&token=" + e.regid + "&appcode=wai-notify-001&platform=ios";
-			var myWindow = window.open(uurrll, '_blank', 'location=no');
-		    setTimeout(function(){ myWindow.close() }, 1000);
-
-			localStorage.idnotify = e.regid;
-			f.style.display = "block";
-		}
-		alert('Registration id: ' + e.regid);
-		break;
-
-		case 'message':
-		alert('message = '+e.message+' msgcnt = '+e.msgcnt);
-		break;
-
-		case 'error':
-		alert('GCM error = '+e.msg);
-		break;
-
-		default:
-		alert('An unknown GCM event has occurred');
-		break;
-	}
-}
-
-
 function onNotificationAPN(event) {
 	alert("Running in JS - onNotificationAPN - Received a notification! " + event.alert);
+	f.style.display = "block";
 
 	if (event.alert) {
 		navigator.notification.alert(event.alert);
@@ -87,5 +59,5 @@ function onNotificationAPN(event) {
 		var snd = new Media(event.sound);
 		snd.play();
 	}
-	
+
 }

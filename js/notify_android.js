@@ -79,19 +79,3 @@ function onNotificationGCM(e) {
 		break;
 	}
 }
-
-
-// onNotificationAPN: function(event) {
-// alert("Running in JS - onNotificationAPN - Received a notification! " + event.alert);
-
-// if (event.alert) {
-	// navigator.notification.alert(event.alert);
-// }
-// if (event.badge) {
-	// pushNotification.setApplicationIconBadgeNumber(app.successHandler, app.errorHandler, event.badge);
-// }
-// if (event.sound) {
-	// var snd = new Media(event.sound);
-	// snd.play();
-// }
-// }
