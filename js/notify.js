@@ -23,10 +23,10 @@ var app = {
 
 		var pushNotification = window.plugins.pushNotification;
 		if (device.platform == 'android' || device.platform == 'Android') {
-			alert("Register called");
+			alert("Register called Android");
 			pushNotification.register(this.successHandler, this.errorHandler,{"senderID":"508191947380","ecb":"app.onNotificationGCM"});
 		} else {
-			alert("Register called");
+			alert("Register called IOS");
 			pushNotification.register(this.successHandler,this.errorHandler,{"badge":"true","sound":"true","alert":"true","ecb":"app.onNotificationAPN"});
 		}
 	},
