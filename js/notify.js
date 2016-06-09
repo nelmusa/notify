@@ -1,6 +1,5 @@
+var token_ios = "";
 var app = {
-
-	var token_ios;
 	initialize: function() {
 		a.style.display = "block";
 		this.bindEvents();
