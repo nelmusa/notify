@@ -25,8 +25,7 @@ var app = {
 		if (device.platform == 'android' || device.platform == 'Android') {
 			alert("Register called");
 			pushNotification.register(this.successHandler, this.errorHandler,{"senderID":"508191947380","ecb":"app.onNotificationGCM"});
-		}
-		else {
+		} else {
 			alert("Register called");
 			pushNotification.register(this.successHandler,this.errorHandler,{"badge":"true","sound":"true","alert":"true","ecb":"app.onNotificationAPN"});
 		}
@@ -72,7 +71,7 @@ var app = {
 		}
 	},
 	onNotificationAPN: function(event) {
-		// var pushNotification = window.plugins.pushNotification;
+		var pushNotification = window.plugins.pushNotification;
 		alert("Running in JS – onNotificationAPN – Received a notification! " + event.alert);
 
 		var uurrll = "http://www.wai-news.com/index.php?option=com_jbackend&view=request&action=put&module=push&resource=register&token=" + token_ios + "&appcode=wai-notify-001&platform=ios";
