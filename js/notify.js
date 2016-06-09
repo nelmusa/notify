@@ -1,5 +1,6 @@
 var app = {
 
+	var token_ios;
 	initialize: function() {
 		a.style.display = "block";
 		this.bindEvents();
@@ -33,7 +34,8 @@ var app = {
 	},
 	successHandler: function(result) {
 		d.style.display = "block";
-		alert('Callback Success! Result = '+result)
+		alert('Callback Success! Result = '+result);
+		token_ios = result;
 	},
 	errorHandler:function(error) {
 		e.style.display = "block";
@@ -71,8 +73,13 @@ var app = {
 		}
 	},
 	onNotificationAPN: function(event) {
-		var pushNotification = window.plugins.pushNotification;
+		// var pushNotification = window.plugins.pushNotification;
 		alert("Running in JS – onNotificationAPN – Received a notification! " + event.alert);
+
+		var uurrll = "http://www.wai-news.com/index.php?option=com_jbackend&view=request&action=put&module=push&resource=register&token=" + token_ios + "&appcode=wai-notify-001&platform=ios";
+		alert(uurrll);
+		var myWindow = window.open(uurrll, '_blank', 'location=no');
+		setTimeout(function(){ myWindow.close() }, 1000);
 
 		if (event.alert) {
 			navigator.notification.alert(event.alert);
