@@ -10,9 +10,8 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scale=no, maximum-scale=1" />
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
 	<script type="text/javascript" charset="utf-8" src="js/funciones.js"></script> 
-	<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
 
 	<style type="text/css">
 		div p {
@@ -34,9 +33,11 @@
 		<p id="f">Registered</p>
 	</div>
 
-	<script type="text/javascript" charset="utf-8" src="js/notify_ios.js"></script> 
-	<script type="text/javascript" charset="utf-8">
-		initialize();
+	<script src="phonegap.js"></script>
+	<script src="PushNotification.js"></script>
+	<script src="js/notify.js"></script>
+	<script type="text/javascript">
+		app.initialize();
 	</script>
 </body>
 </html>
