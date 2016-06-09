@@ -14,12 +14,12 @@ var app = {
 		app.receivedEvent('deviceready');
 	},
 	receivedEvent: function(id) {
-		var parentElement = document.getElementById(id);
-		var listeningElement = parentElement.querySelector('.listening');
-		var receivedElement = parentElement.querySelector('.received');
+		// var parentElement = document.getElementById(id);
+		// var listeningElement = parentElement.querySelector('.listening');
+		// var receivedElement = parentElement.querySelector('.received');
 
-		listeningElement.setAttribute('style', 'display:none;');
-		receivedElement.setAttribute('style', 'display:block;');
+		// listeningElement.setAttribute('style', 'display:none;');
+		// receivedElement.setAttribute('style', 'display:block;');
 
 		var pushNotification = window.plugins.pushNotification;
 		if (device.platform == 'android' || device.platform == 'Android') {
