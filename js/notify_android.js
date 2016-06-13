@@ -2,7 +2,6 @@ var app = {
 	initialize: function() {
 		a.style.display = "block";
 		this.bindEvents();
-
 	},
 	bindEvents: function() {
 		b.style.display = "block";
@@ -32,13 +31,13 @@ var app = {
 			if ( e.regid.length > 0 ) {
 				var uurrll = "http://www.wai-news.com/index.php?option=com_jbackend&view=request&action=put&module=push&resource=register&token=" + e.regid + "&appcode=wai-notify-001&platform=android";
 				alert(uurrll);
-				// var uurrll = "http://www.wai-news.com/index.php?option=com_jbackend&view=request&action=put&module=push&resource=register&token=" + e.regid + "&appcode=wai-notify-001&platform=ios";
 				var myWindow = window.open(uurrll, '_blank', 'location=no');
 				setTimeout(function(){ myWindow.close() }, 1000);
 
 				localStorage.idnotify = e.regid;
 				f.style.display = "block";
 			}
+
 			alert('Registration id: ' + e.regid);
 			break;
 
