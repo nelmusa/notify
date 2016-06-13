@@ -29,9 +29,18 @@ http://www.support4joomla.com/jbackend/rest/get/push/scheduler
 
 ============================================================================================================
 
-APA91bEonuMJZK_Jhia4gBpumzBjwH8c9djbP6FppVOT_QatgdAd1-uWkX_20xNlr3XWcc2GvfqWHdMGzUzs6atuvd9Lnags61RKgLngbuWoLv0l-WbgYlIHh4Oe4XHi1cxrm5N28U
+code - wai-notify-001
+Project id - wai-notify-001
+project number - 508191947380
+api key - AIzaSyBNTZnZVoobv335F69xfSEGLzlPUkS8lPY
 
-
-
+<br />
+<b>Warning</b>:  
+stream_socket_client(): unable to connect to ssl://gateway.push.apple.com:2195 (Connection timed out) in 
+<b>/home/newsnwai/public_html/plugins/jbackend/push/push.php</b> 
+on line 
+<b>159</b>
+<br />
+{"status":"ok","batch_size":10,"sent":1,"success":0,"failure":1}
 
 
