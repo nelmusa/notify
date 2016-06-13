@@ -13,15 +13,9 @@ var app = {
 		app.receivedEvent('deviceready');
 	},
 	receivedEvent: function(id) {
-		// var parentElement = document.getElementById(id);
-		// var listeningElement = parentElement.querySelector('.listening');
-		// var receivedElement = parentElement.querySelector('.received');
-
-		// listeningElement.setAttribute('style', 'display:none;');
-		// receivedElement.setAttribute('style', 'display:block;');
 		var pushNotification = window.plugins.pushNotification;
 		alert("Register called Android");
-		pushNotification.register(successHandler, errorHandler,{"senderID":"508191947380","ecb":"onNotificationGCM"});
+		pushNotification.register(this.successHandler,this.errorHandler,{"senderID":"508191947380","ecb":"app.onNotificationGCM"});
 	},
 	successHandler: function(result) {
 		if (result = "ok") {
