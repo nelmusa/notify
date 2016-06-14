@@ -15,7 +15,7 @@ var app = {
 	receivedEvent: function(id) {
 		var pushNotification = window.plugins.pushNotification;
 		alert("Register called IOS");
-		pushNotification.register(this.successHandler,this.errorHandler,{"badge":"true","sound":"true","alert":"true","ecb":"app.onNotificationAPN"});
+		pushNotification.register(this.successHandler,this.errorHandler,{"badge":"1","sound":"1","alert":"1","ecb":"app.onNotificationAPN"});
 	},
 	successHandler: function(result) {
 		d.style.display = "block";
