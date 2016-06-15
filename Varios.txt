@@ -34,14 +34,6 @@ Project id - wai-notify-001
 project number - 508191947380
 api key - AIzaSyBNTZnZVoobv335F69xfSEGLzlPUkS8lPY
 
-<br />
-<b>Warning</b>:  
-stream_socket_client(): unable to connect to ssl://gateway.push.apple.com:2195 (Connection timed out) in 
-<b>/home/newsnwai/public_html/plugins/jbackend/push/push.php</b> 
-on line 
-<b>159</b>
-<br />
-{"status":"ok","batch_size":10,"sent":1,"success":0,"failure":1}
 
 ============================================================================================================
 
