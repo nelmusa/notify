@@ -72,6 +72,8 @@ on line
 	</platform>
 
 
+ssl://gateway.push.apple.com:2195
 
 
+ssl://gateway.sandbox.push.apple.com:2195
 
