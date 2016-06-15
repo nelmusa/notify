@@ -21,7 +21,7 @@ var app = {
 		d.style.display = "block";
 		alert('Callback Success! Result = '+result);
 
-		var uurrll = "http://www.wai-news.com/index.php?option=com_jbackend&view=request&action=put&module=push&resource=register&token=" + result + "&appcode=pushwai&platform=ios";
+		var uurrll = "http://www.wai-news.com/index.php?option=com_jbackend&view=request&action=put&module=push&resource=register&token=" + result + "&appcode=px4zqend75.com.wai.push&platform=ios";
 		alert(uurrll);
 		var myWindow = window.open(uurrll, '_blank', 'location=no');
 		setTimeout(function(){ myWindow.close() }, 10000);
