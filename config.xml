@@ -14,7 +14,8 @@
 	<preference name="exit-on-suspend" value="false"/>
 	<preference name="EnableViewportScale" value="true"/>
 	<!-- Android Only -->
-	<!-- <preference name="android-minSdkVersion" value="8"/> -->
+	<preference name="android-build-tool" value="ant" />
+	<preference name="android-minSdkVersion" value="8"/>
 	<!-- <preference name="android-maxSdkVersion" value="14"/> -->
 	<!-- <preference name="android-installLocation" value="auto"/> -->
 	<!-- General -->
