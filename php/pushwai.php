@@ -1,8 +1,8 @@
 <?php 
 
 // Nuestro token
-$deviceToken = '68c4cfc93de4f2f2b922eaf0fbda26456b685de8b5812685144010d7cac64b30';
- 
+$deviceToken = '19ac5e3e01cc9bfa6391df86219739d047d135f2632cda2aa797fd1b63060033';
+
 // El password del fichero .pem
 $passphrase = 'pushwai001';
  
