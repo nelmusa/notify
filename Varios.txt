@@ -66,6 +66,5 @@ api key - AIzaSyBNTZnZVoobv335F69xfSEGLzlPUkS8lPY
 
 ssl://gateway.push.apple.com:2195
 
-
 ssl://gateway.sandbox.push.apple.com:2195
 
