@@ -1,6 +1,6 @@
 <!-- <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="pushwai" version="1.0.3"> -->
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.wai.push" version="1.0.3" ios-CFBundleIdentifier="com.wai.push">
-<!-- <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="nms.wai.001" version="1.0.2"> -->
+<!-- <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.wai.push" version="1.0.3" ios-CFBundleIdentifier="com.wai.push"> -->
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="nms.wai.001" version="1.0.2">
 	<name>Notify</name>
 	<!-- <name>com.wai.push</name> -->
 	<description>Prueba de Notificaciones</description>
