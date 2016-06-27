@@ -48,3 +48,18 @@ var app = {
 		}
 	}
 };
+
+  window.onNotificationAPN = function(e) {
+        if (e.alert) {
+            $log.debug('push APN alert ' + e.alert);
+        }
+        if (e.sound) {
+            $log.debug('push APN sound');
+        }
+        if (e.badge) {
+            $log.debug('push APN badge ' + e.badge);
+            pushNotification.setApplicationIconBadgeNumber(successBadgeHandler, errorBadgeHandler, e.badge);
+        }
+        $log.debug('push APN full event ' + JSON.stringify(e));
+        $rootScope.$emit('push.received', JSON.parse(e.data));
+    };
