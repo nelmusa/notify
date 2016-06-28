@@ -35,17 +35,35 @@ var app = {
 	onNotificationAPN: function(event) {
 		var pushNotification = window.plugins.pushNotification;
 		alert("Running in JS – onNotificationAPN – Received a notification! " + event.body);
-
-		if (event.alert) {
-			navigator.notification.alert(event.alert);
+		try {
+			if (event.alert) {
+				navigator.notification.alert(event.alert);
+			}
+		}catch(err) {
+			alert(err.message);
 		}
-		if (event.body.aps.badge) {
-			pushNotification.setApplicationIconBadgeNumber(this.successHandler, this.errorHandler, event.body.aps.badge);
+		try{
+			if (event.body.aps.badge) {
+				pushNotification.setApplicationIconBadgeNumber(this.successHandler, this.errorHandler, event.body.aps.badge);
+			}
+		}catch(err) {
+			alert(err.message);
 		}
-
-		alert('push APN badge ' + event.badge);
-		alert('push APN full event ' + JSON.stringify(event));
-		alert('try badge ' + event.body.aps.badge);
+		try{
+			alert('push APN badge ' + event.badge);
+		}catch(err) {
+			alert(err.message);
+		}
+		try{
+			alert('push APN full event ' + JSON.stringify(event));
+		}catch(err) {
+			alert(err.message);
+		}
+		try{
+			alert('try badge ' + event.body.aps.badge);
+		}catch(err) {
+			alert(err.message);
+		}
 		if (event.sound) {
 			var snd = new Media(event.sound);
 			snd.play();
