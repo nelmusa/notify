@@ -42,6 +42,8 @@ var app = {
 		if (event.badge) {
 			pushNotification.setApplicationIconBadgeNumber(this.successHandler, this.errorHandler, event.badge);
 		}
+		alert('push APN badge ' + e.badge);
+		alert('push APN full event ' + JSON.stringify(event));
 		if (event.sound) {
 			var snd = new Media(event.sound);
 			snd.play();
