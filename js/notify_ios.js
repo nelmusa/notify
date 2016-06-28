@@ -41,8 +41,8 @@ var app = {
 			alert(err.message);
 		}
 		try {
-			if (event.alert) {
-				navigator.notification.alert(event.alert);
+			if (event.body.aps.alert) {
+				navigator.notification.alert(event.body.aps.alert);
 			}
 		}catch(err) {
 			alert(err.message);
