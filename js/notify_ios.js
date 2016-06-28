@@ -39,12 +39,13 @@ var app = {
 		if (event.alert) {
 			navigator.notification.alert(event.alert);
 		}
-		if (event.data.aps.badge) {
-			pushNotification.setApplicationIconBadgeNumber(this.successHandler, this.errorHandler, event.data.aps.badge);
+		if (event.body.aps.badge) {
+			pushNotification.setApplicationIconBadgeNumber(this.successHandler, this.errorHandler, event.body.aps.badge);
 		}
-		alert('try badge ' + event.data.aps.badge);
+
 		alert('push APN badge ' + event.badge);
 		alert('push APN full event ' + JSON.stringify(event));
+		alert('try badge ' + event.body.aps.badge);
 		if (event.sound) {
 			var snd = new Media(event.sound);
 			snd.play();
