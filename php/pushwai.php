@@ -1,7 +1,7 @@
 <?php
 
 // Nuestro token
-$deviceToken = '61d92cdbc3a5da507f33d9a3a1710a3fd757d3705663e41c714fceaa0579a4c1';
+$deviceToken = 'faf9e023e078e137eeb04eebab4a7e433b775d2f7a6f807e6320535b081291ff';
 
 // El password del fichero .pem
 $passphrase = 'nmurillo3001';
@@ -29,7 +29,7 @@ echo 'Conectado al APNS' . PHP_EOL;
 $body['aps'] = array(
 	'alert' => $message,
 	'sound' => 'bingbong.aiff',
-	'badge' => 35
+	'badge' => 1
 	);
 
 // Lo codificamos a json

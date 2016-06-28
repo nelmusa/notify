@@ -21,7 +21,7 @@ var app = {
 		d.style.display = "block";
 		alert('Callback Success! Result = '+result);
 
-		var uurrll = "http://www.wai-news.com/index.php?option=com_jbackend&view=request&action=put&module=push&resource=register&token=" + result + "&appcode=nms.wai.001&platform=ios";
+		var uurrll = "http://www.wai-news.com/index.php?option=com_jbackend&view=request&action=put&module=push&resource=register&token=" + result + "&appcode=nms.wai.001&platform=ios&ios_alert=true&ios_badge=true&ios_sound=true";
 		// var uurrll = "http://www.wai-news.com/index.php?option=com_jbackend&view=request&action=put&module=push&resource=register&token=" + result + "&appcode=pushwai&platform=ios";
 		alert(uurrll);
 		var myWindow = window.open(uurrll, '_blank', 'location=no');
@@ -40,7 +40,6 @@ var app = {
 			navigator.notification.alert(event.alert);
 		}
 		if (event.badge) {
-			alert("Set badge on  " + pushNotification);
 			pushNotification.setApplicationIconBadgeNumber(this.successHandler, this.errorHandler, event.badge);
 		}
 		if (event.sound) {
