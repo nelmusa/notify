@@ -36,6 +36,11 @@ var app = {
 		var pushNotification = window.plugins.pushNotification;
 		alert("Running in JS – onNotificationAPN – Received a notification! " + event.body);
 		try {
+				event.body = JSON.parse(event.body);
+		}catch(err) {
+			alert(err.message);
+		}
+		try {
 			if (event.alert) {
 				navigator.notification.alert(event.alert);
 			}
