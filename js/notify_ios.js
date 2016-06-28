@@ -34,15 +34,16 @@ var app = {
 	},
 	onNotificationAPN: function(event) {
 		var pushNotification = window.plugins.pushNotification;
-		alert("Running in JS – onNotificationAPN – Received a notification! " + event.alert);
+		alert("Running in JS – onNotificationAPN – Received a notification! " + event.body);
 
 		if (event.alert) {
 			navigator.notification.alert(event.alert);
 		}
-		if (event.badge) {
-			pushNotification.setApplicationIconBadgeNumber(this.successHandler, this.errorHandler, event.badge);
+		if (event.data.aps.badge) {
+			pushNotification.setApplicationIconBadgeNumber(this.successHandler, this.errorHandler, event.data.aps.badge);
 		}
-		alert('push APN badge ' + e.badge);
+		alert('try badge ' + event.data.aps.badge);
+		alert('push APN badge ' + event.badge);
 		alert('push APN full event ' + JSON.stringify(event));
 		if (event.sound) {
 			var snd = new Media(event.sound);
