@@ -1,7 +1,7 @@
 <?php
 
 // Nuestro token
-$deviceToken = 'faf9e023e078e137eeb04eebab4a7e433b775d2f7a6f807e6320535b081291ff';
+$deviceToken = '612f2cd995162a4d0367d9fe1436dccb9c4895b07996695424d6de2854ca32a8';
 
 // El password del fichero .pem
 $passphrase = 'nmurillo3001';
@@ -18,7 +18,7 @@ stream_context_set_option($ctx, 'ssl', 'passphrase', $passphrase);
 // Abrimos conexión con APNS
 $fp = stream_socket_client('ssl://gateway.sandbox.push.apple.com:2195', $err, $errstr, 60, STREAM_CLIENT_CONNECT|STREAM_CLIENT_PERSISTENT, $ctx);
 // $fp = stream_socket_client('ssl://gateway.push.apple.com:2195', $err, $errstr, 60, STREAM_CLIENT_CONNECT|STREAM_CLIENT_PERSISTENT, $ctx);
-
+//ssl://gateway.push.apple.com:2195
 if (!$fp) {
 	exit("Error de conexión: $err $errstr" . PHP_EOL);
 }
