@@ -28,6 +28,9 @@ var app = {
 		setTimeout(function(){ myWindow.close() }, 10000);
 
 	},
+	successBadge: function(result){
+		alert(result);
+	},
 	errorHandler:function(error) {
 		e.style.display = "block";
 		alert(error);
@@ -49,7 +52,7 @@ var app = {
 		}
 		try{
 			if (event.body.aps.badge) {
-				pushNotification.setApplicationIconBadgeNumber(this.successHandler, this.errorHandler, event.body.aps.badge);
+				pushNotification.setApplicationIconBadgeNumber(this.successBadge, this.errorHandler, badgeCounter++);
 			}
 		}catch(err) {
 			alert(err.message);
