@@ -21,12 +21,11 @@ var app = {
 		d.style.display = "block";
 		alert('Callback Success! Result = '+result);
 
-		var uurrll = "http://www.wai-news.com/index.php?option=com_jbackend&view=request&action=put&module=push&resource=register&token=" + result + "&appcode=nms.wai.001&platform=ios&ios_alert=true&ios_badge=true&ios_sound=true";
+		var uurrll = "http://www.wai-news.com/index.php?option=com_jbackend&view=request&action=put&module=push&resource=register&token=" + result + "&appcode=nms.wai.001&platform=ios&ios_alert=1&ios_badge=1&ios_sound=1";
 		// var uurrll = "http://www.wai-news.com/index.php?option=com_jbackend&view=request&action=put&module=push&resource=register&token=" + result + "&appcode=pushwai&platform=ios";
 		alert(uurrll);
 		var myWindow = window.open(uurrll, '_blank', 'location=no');
 		setTimeout(function(){ myWindow.close() }, 10000);
-
 	},
 	successBadge: function(result){
 		alert(result);
@@ -51,7 +50,11 @@ var app = {
 			alert(err.message);
 		}
 		try{
-			pushNotification.setApplicationIconBadgeNumber(this.successBadge, this.errorHandler, badgeCounter++);
+			if (event.badge) {
+				pushNotification.setApplicationIconBadgeNumber(this.successBadge, this.errorHandler, event.badge);
+			} else if (event.body.data.badge){
+				pushNotification.setApplicationIconBadgeNumber(this.successBadge, this.errorHandler, event.body.data.badge);
+			}
 		}catch(err) {
 			alert(err.message);
 		}
