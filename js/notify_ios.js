@@ -51,9 +51,7 @@ var app = {
 			alert(err.message);
 		}
 		try{
-			if (event.body.aps.badge) {
-				pushNotification.setApplicationIconBadgeNumber(this.successBadge, this.errorHandler, badgeCounter++);
-			}
+			pushNotification.setApplicationIconBadgeNumber(this.successBadge, this.errorHandler, badgeCounter++);
 		}catch(err) {
 			alert(err.message);
 		}
