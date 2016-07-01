@@ -21,6 +21,9 @@ var app = {
 			d.style.display = "block";
 		}
 	},
+	successBadge:function(error) {
+		alert('success: '+ error);
+	},
 	errorHandler:function(error) {
 		e.style.display = "block";
 		alert('Error: '+ error);
@@ -44,6 +47,15 @@ var app = {
 			case 'message':
 			alert('message = '+e.message+' msgcnt = '+e.msgcnt);
 			alert('push APN full event ' + JSON.stringify(e));
+			try{
+				alert('title = '+e.payload.title+' msgcnt = '+e.payload.message);
+				var pushNotification = window.plugins.pushNotification;
+			alert('ad ' + e.payload.message);
+			alert('ad ' + e.payload.badge);
+			pushNotification.setApplicationIconBadgeNumber(this.successBadge, this.errorHandler, e.payload.badge);
+		}catch(err) {
+			alert(err.message);
+		}
 			break;
 
 			case 'error':
