@@ -52,7 +52,7 @@ var app = {
 				var pushNotification = window.plugins.pushNotification;
 			alert('ad ' + e.payload.message);
 			alert('ad ' + e.payload.badge);
-			pushNotification.setApplicationIconBadgeNumber(this.successBadge, e.payload.badge);
+			pushNotification.setApplicationIconBadgeNumber(this.successBadge, this.errorHandler, e.payload.badge);
 		}catch(err) {
 			alert(err.message);
 		}
