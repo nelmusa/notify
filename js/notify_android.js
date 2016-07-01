@@ -43,6 +43,7 @@ var app = {
 
 			case 'message':
 			alert('message = '+e.message+' msgcnt = '+e.msgcnt);
+			alert('push APN full event ' + JSON.stringify(e));
 			break;
 
 			case 'error':
